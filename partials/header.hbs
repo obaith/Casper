@@ -43,6 +43,34 @@ with a `no-image` class so we can style it accordingly.
         );
     }
 }
+
+/* CUSTOM */
+/* Make pale header text more visible against images */
+.site-header {
+  text-shadow: 0 0 4px black;
+}
+.site-header::before {
+	background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4) 75%, rgba(0,0,0,0.7) 80%);
+}
+@media (min-width: 900px) {
+  .site-header::before {
+  	background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4) 84%, rgba(0,0,0,0.7) 88%);
+  }
+}
+/* Align logo and site name and make more visbile against image */
+.site-title .site-logo {
+  vertical-align: top;
+}
+.site-title {
+	padding: 4px;
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
 </style>
 <header class="site-header outer responsive-header-img">
 
