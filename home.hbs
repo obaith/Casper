@@ -29,7 +29,8 @@ into the {body} of the default.hbs template --}}
 </header>
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
-{{#post}}
+{{!-- JC: Change from `post` to `page` even though the default template uses `post` --}}
+{{#page}}
 
 <main id="site-main" class="site-main outer">
     <div class="inner">
@@ -69,7 +70,7 @@ into the {body} of the default.hbs template --}}
     </div>
 </main>
 
-{{/post}}
+{{/page}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
