@@ -8,11 +8,14 @@ into the {body} of the default.hbs template --}}
             {{> "site-nav"}}
             <div class="site-header-content">
                 <h1 class="site-title">
-                    {{#if @site.logo}}
-                        <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
-                    {{else}}
+                    {{! JC: Make the header content a link to the homepage.}}
+                    <a href="/">
+                        {{#if @site.logo}}
+                            <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
+                        {{/if}}
+                        {{! JC: Always render the site title (Casper default is logo or title) }}
                         {{@site.title}}
-                    {{/if}}
+                    </a>
                 </h1>
                 <h2 class="site-description">{{@site.description}}</h2>
             </div>
@@ -22,6 +25,12 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
+
+    {{! JC: Hard Code "Blog" title }}
+    <header class="post-full-header">
+      <h2 class="post-full-title">Obaith Blog</h1>
+    </header>
+
     <div class="inner posts">
 
         <div class="post-feed">
@@ -47,7 +56,7 @@ into the {body} of the default.hbs template --}}
     //   Dropping the scroll event and using only a raf loop results in smoother
     //   scrolling but continuous processing even when not scrolling
     $(document).ready(function () {
-        
+
         var nav = document.querySelector('.site-nav-main .site-nav');
         var feed = document.querySelector('.post-feed');
 
