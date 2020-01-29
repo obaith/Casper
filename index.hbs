@@ -18,7 +18,8 @@ into the {body} of the default.hbs template --}}
                         {{@site.title}}
                     </a>
                 </h1>
-                <h2 class="site-description">{{@site.description}}</h2>
+                {{!-- JC: Change from site description to 'Blog'. --}}
+                <h2 class="site-description">Blog</h2>
             </div>
         </div>
     </div>
@@ -26,12 +27,6 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
-
-    {{!-- JC: Hard Code "Blog" title --}}
-    <header class="post-full-header">
-      <h2 class="post-full-title">Obaith Blog</h2>
-    </header>
-
     <div class="inner posts">
 
         <div class="post-feed">
