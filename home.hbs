@@ -2,22 +2,22 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-{{! JC: A static landing page. Same as `page.hbs` but with the header from `index.hbs`.}}
+{{!-- JC: A static landing page. Same as `page.hbs` but with the header from `index.hbs`. --}}
 
-{{! JC: Use the big header taken from `index.hbs` rather than the standard page header.}}
-{{! JC: Not in partial to minimise difference from default Casper. }}
+{{!-- JC: Use the big header taken from `index.hbs` rather than the standard page header. --}}
+{{!-- JC: Not in partial to minimise difference from default Casper. --}}
 <header class="site-home-header">
     {{> header-background background=@site.cover_image}} {{!--Special header-image.hbs partial to generate the background image--}}
         <div class="inner">
             {{> "site-nav"}}
             <div class="site-header-content">
                 <h1 class="site-title">
-                    {{! JC: Make the header content a link to the homepage.}}
+                    {{!-- JC: Make the header content a link to the homepage. --}}
                     <a href="/">
                         {{#if @site.logo}}
                             <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
                         {{/if}}
-                        {{! JC: Always render the site title (Casper default is logo or title) }}
+                        {{!-- JC: Always render the site title (Casper default is logo or title) --}}
                         {{@site.title}}
                     </a>
                 </h1>

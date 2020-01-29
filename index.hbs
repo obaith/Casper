@@ -8,12 +8,12 @@ into the {body} of the default.hbs template --}}
             {{> "site-nav"}}
             <div class="site-header-content">
                 <h1 class="site-title">
-                    {{! JC: Make the header content a link to the homepage.}}
+                    {{!-- JC: Make the header content a link to the homepage. --}}
                     <a href="/">
                         {{#if @site.logo}}
                             <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
                         {{/if}}
-                        {{! JC: Always render the site title (Casper default is logo or title) }}
+                        {{!-- JC: Always render the site title (Casper default is logo or title) --}}
                         {{@site.title}}
                     </a>
                 </h1>
@@ -26,7 +26,7 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
 
-    {{! JC: Hard Code "Blog" title }}
+    {{!-- JC: Hard Code "Blog" title --}}
     <header class="post-full-header">
       <h2 class="post-full-title">Obaith Blog</h1>
     </header>
